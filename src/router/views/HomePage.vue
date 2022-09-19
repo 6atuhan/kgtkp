@@ -1,9 +1,9 @@
 <template>
 
-        <h1 class="text-5xl select-none text-center font-extrabold leading-10 text-white my-16 sm:my-16 text-outline md:fixed md:top-2 md:left-2 md:my-0 ">K G T K P</h1>
+        <h1 class="text-5xl shine select-none text-center font-extrabold leading-10 text-white my-16 sm:my-16 text-outline md:fixed md:top-2 md:left-2 md:my-0 ">K G T K P</h1>
 
 
-        <div class="md:mt-16 flip-horizontal-bottom text-5xl select-none text-center font-extrabold leading-10 text-white"><p class="after:content-['kg'] after:text-xs after:text-gray-400 ">{{currentWeight.weight}}</p> </div>
+        <div class="md:mt-16 text-5xl select-none text-center font-extrabold leading-10 text-white"><p class="after:content-['kg'] after:text-xs after:text-gray-400 ">{{currentWeight.weight}}</p> </div>
 
     <div class="flex items-center flex-col justify-center my-16">
 
@@ -14,8 +14,8 @@
         </form>
     </div>
     <div v-if="weights && weights.length>0" class="text-white">
-        <h1 class="text-center">Son 7 kilo kayıt</h1>
-        <div class="canvas-box md:w-2/3 m-auto">
+        <h1 class="text-center">Son 7 kilo kayıt.</h1>
+        <div class="canvas-box md:w-2/3 m-auto ">
             <canvas ref="weightChartEl"></canvas>
         </div>
         <div>
@@ -128,9 +128,9 @@
 
 
 
-    .flip-horizontal-bottom {
-	-webkit-animation: flip-horizontal-bottom 4000ms cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite alternate both;
-	        animation: flip-horizontal-bottom 4000ms cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite alternate both;
+    .shine {
+	-webkit-animation: shine 4000ms cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite alternate both;
+	        animation: shine 4000ms cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite alternate both;
         }
 
 /* ----------------------------------------------
@@ -145,24 +145,21 @@
  * animation flip-horizontal-bottom
  * ----------------------------------------
  */
- @-webkit-keyframes flip-horizontal-bottom {
+ @-webkit-keyframes shine {
   0% {
-    -webkit-transform: rotateX(0);
-            transform: rotateX(0);
+
   }
   100% {
-    -webkit-transform: rotateX(-180deg);
-            transform: rotateX(-180deg);
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+    color: rgb(255, 124, 216);
   }
 }
-@keyframes flip-horizontal-bottom {
+@keyframes shine {
   0% {
-    -webkit-transform: rotateX(0);
-            transform: rotateX(0);
+
   }
   100% {
-    -webkit-transform: rotateX(360deg);
-            transform: rotateX(360deg);
+
     text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
     color: rgb(255, 124, 216);
   }
