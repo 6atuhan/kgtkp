@@ -34,7 +34,7 @@
             </div>
         </div>
     </div>
-    <button @click="authgetir" class="text-white text-5xl">authgetirrrrrrr</button>
+
 </template>
 
 <script setup>
@@ -66,10 +66,6 @@ const collectionName = ref(auth.lastNotifiedUid)
 const q = collection(db, collectionName.value)
 
 
-    const authgetir=()=>{
-        console.log('currentUser', currentUser)
-        console.log('auth', auth)
-    }
 
     const currentWeight=computed(()=>{
         return weights.value.sort((a,b)=>b.date-a.date)[0] || {weight:0}
